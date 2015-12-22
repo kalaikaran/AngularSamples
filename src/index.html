@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Sample</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script src="app/controllers/controllerOne.js"></script>
+    <script src="app/controllers/controllerTwo.js"></script>
+    <script src="app/controllers/controllerThree.js"></script>
+</head>
+<body ng-cloak>
+
+    <div ng-controller="contollerOne">
+        <button type="button" ng-click="displayFirstName();" value="Display FirstName">Display FirstName</button>
+            <div ng-show="isFirstName">
+                FirstName: <span ng-bind="firstName"></span>{{ topic }}
+                <button type="button" ng-click="hideFirstName();" value="Hide FirstName">hide FirstName</button>
+            </div>
+        <button type="button" ng-click="displayLastName();" value="Display LastName">Display LastName</button>
+            <div ng-show="isLastName">LastName: <span ng-bind="lastName"></span></div>
+        <button type="button" ng-click="displayAge();" value="Display Age">Display Age</button>
+            <div ng-show="isAge">Age: <span ng-bind="age"></span></div>
+    </div>
+
+
+
+   <!-- <div ng-controller="contollerTwo">
+        LastName: <span ng-bind="lastName"></span>
+    </div>
+    <div ng-controller="contollerThree">
+        Age: <span ng-bind="age"></span>
+    </div>-->
+
+</body>
+</html>
