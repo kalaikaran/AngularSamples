@@ -22,14 +22,24 @@
             <div ng-show="isAge">Age: <span ng-bind="age"></span></div>
     </div>
 
-
-
-   <!-- <div ng-controller="contollerTwo">
-        LastName: <span ng-bind="lastName"></span>
+    <div ng-controller="controllerTwo">
+        <button type="button" value="click" ng-click="showDetail()">display population</button>
+        <div ng-show="countriesDetails">
+        <input id="country" ng-model="query" type="text" name="con" />
+        <input id="name" type="checkbox" ng-model="order" value="name" checked="checked" name="name"/>
+        <input id="capital" type="checkbox" ng-model="order1" value="capital" name="capital"/>
+        <table >
+            <tr>
+                <td>Country</td>
+                <td>Capital</td>
+                <td>Population</td>
+            </tr>
+            <tr ng-repeat="country in countriesDetails | filter:{capital:query} | orderBy:'order'">
+                <td ng-bind="country.name"></td>
+                <td ng-bind="country.capital"></td>
+                <td ng-bind="country.population"></td>
+            </tr>
+        </table>
     </div>
-    <div ng-controller="contollerThree">
-        Age: <span ng-bind="age"></span>
-    </div>-->
-
 </body>
 </html>
